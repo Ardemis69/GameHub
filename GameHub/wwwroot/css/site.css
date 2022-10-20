@@ -16,3 +16,9 @@ html {
 body {
   margin-bottom: 60px;
 }
+.thumb{
+    width: 100px;
+}
+.navbar-dark {
+    background-color: #D32F2F;
+}
