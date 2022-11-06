@@ -25,7 +25,11 @@ builder.Services.AddAuthentication()
         options.ClientSecret = configuration["Authentication:Google:ClientSecret"];
 
     })
-    ;
+    .AddFacebook(options =>
+    {
+        options.AppId = configuration["Authentication:Facebook:AppId"];
+        options.AppSecret = configuration["Authentication:Facebook:AppSecret"];
+    });
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.
